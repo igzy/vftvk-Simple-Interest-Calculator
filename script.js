@@ -10,7 +10,10 @@ function compute(){
     let date =  new Date().getFullYear();
     //check for amount
     if(principal == ""){
-        alert("Please enter the principal amount");
+        alert("Please enter the positive principal amount");
+	    principal.focus();
+    }else if (principal < 0){
+        alert("Principal amount cannot be negative");
 	    principal.focus();
     }
 
